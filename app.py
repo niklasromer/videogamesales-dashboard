@@ -8,7 +8,6 @@ df.dropna(inplace=True)
 df['Year'] = df['Year'].astype(int)
 df['Global_Sales'] = df['Global_Sales'].astype(int)
 
-# Falsche Plattformen entfernen
 df = df[~df['Platform'].isin(['2600', 'PCFX', 'GG', '3DO', 'TG16', 'NG', 'WS'])]
 
 app = Dash(__name__)
